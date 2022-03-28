@@ -16,8 +16,9 @@ On the first day of the workshop, a basic introduction to the FPGA was given. A 
 * Field Programmable Gate Arrays designed to be configured by user
 * Field Programmable Gate Arrays contains LUTs, FFs, Specialized blocks including BRAM, DSPs, and configurable logic blocks linked by routing resources to implement complex customizable designs
 3. Difference between ASIC and FPGA
-ASIC | FPGA
---- | ---
+
+ASIC	| 	FPGA
+---	| 	---
 Designed for specific applications | Can be reconfigured with different designs
 Complex and long design process | Relatively Simple design process
 Design is pre-verified and then fabricated on silicon | Can be Used for prototyping and validating a design
@@ -218,9 +219,6 @@ endmodule
   * Generate bitstream and program the board
   * Open VIO window in hardware manager, add probes and observe signals.
 
-![util](https://user-images.githubusercontent.com/92034288/160284821-8da1402e-e81b-4134-9ada-00cd849c2bf7.png)
-*Figure 6. Snapshot of VIO Counter*
-
 ## Day 2: OpenFPGA Flow
 
 ### Part 1: OpenFPGA Intro
@@ -245,7 +243,9 @@ endmodule
 ```
 * After running the command VPR CAD Flow opens in GUI
 * VPR generates different log files in run directory .net represents packing, .place represent placement of design on fpga fabric and .route represents routing
+
 ![Screenshot from 2022-03-26 15-03-26](https://user-images.githubusercontent.com/92034288/160288076-46966d59-01d5-4373-a757-3a03d5f29766.png)
+
 *Figure 7. Snapshot of VPR CAD Flow to Visualize Mapped design*
 
 ### Part 3: VTR
@@ -264,16 +264,21 @@ endmodule
  -temp_dir . --route_chan_width 100
 
 ```
-![Screenshot from 2022-03-27 21-14-24](https://user-images.githubusercontent.com/92034288/160416752-16482ba5-596c-46ab-8a20-356e26592302.png)
-*Figure 8. Snapshot of VPR CAD Flow to Visualize Mapped design*
 
-![Screenshot from 2022-03-27 21-45-22](https://user-images.githubusercontent.com/92034288/160424923-264618c8-7d3e-4e76-9880-151dd814cea6.png)
+![Screenshot from 2022-03-27 21-14-24](https://user-images.githubusercontent.com/92034288/160416752-16482ba5-596c-46ab-8a20-356e26592302.png)
+
+*Figure 8. Snapshot of VTR flow successful Run and Generated Timing and Log Files*
+
+![fig9](https://user-images.githubusercontent.com/92034288/160433534-ee3894f9-7aed-4d05-9d00-48bff0e65e03.png)
+
 *Figure 9. Power Breakdown Results for Counter*
 
-![Screenshot from 2022-03-27 23-52-57](https://user-images.githubusercontent.com/92034288/160425559-5ded0d54-23a4-41df-bacd-6cd18bc4d061.png)
+![fig10](https://user-images.githubusercontent.com/92034288/160433590-1b428a14-f7a4-4b97-ac47-8404987b22c3.png)
+
 *Figure 10. Slack Results for Counter*
 
 ![Screenshot from 2022-03-27 21-30-45](https://user-images.githubusercontent.com/92034288/160425846-3087700d-b1c1-4f6d-b372-d7cc76a12e05.png)
+
 *Figure 11. Simulation of post_synthesis Counter Design on Vivado*
 
 
@@ -1535,37 +1540,47 @@ endmodule
  * Add new designs in benchmark directory and update task_simulation.conf to run those designs
 
 
-![Screenshot from 2022-03-27 22-19-42](https://user-images.githubusercontent.com/92034288/160399793-43113941-65a1-4752-8b6c-310bb1ac2c57.png)
+![fig15](https://user-images.githubusercontent.com/92034288/160433777-fb7439df-691a-4f09-9c77-bca96d712c03.png)
+
 *Figure 15. Shows The Counter's Resource Utilization*
 
-![Screenshot from 2022-03-27 22-32-13](https://user-images.githubusercontent.com/92034288/160400439-d7bb0019-7527-4bdc-ba99-c7d486dab562.png)
+![fig16](https://user-images.githubusercontent.com/92034288/160433977-43838695-a3e4-408c-bd72-62b48308571f.png)
+
 *Figure 16. Snapshot of The Generated Timing Reports*
 
-![Screenshot from 2022-03-27 22-37-56](https://user-images.githubusercontent.com/92034288/160400894-f313ddee-bc0c-4bf6-acc8-4f9ed2483899.png)
+![fig17](https://user-images.githubusercontent.com/92034288/160434029-ec32a6a2-d8c9-4f75-bad1-24bf3600d6f5.png)
+
 *Figure 17. Snapshot of The generated post_synthesis File*
 
 ![Screenshot from 2022-03-28 00-33-57](https://user-images.githubusercontent.com/92034288/160405573-d33c14e1-daf2-4385-8168-0d0b15ffea33.png)
+
 *Figure 18. Snapshot of The post_synthesis Counter Design on Vivado*
 
 ## Day 5: RISC-V Core on Custom SOFA Fabric
 
 * Run rvmyth core on SOFA by adding core design in benchmarks and update the task_simulation.conf file accordingly.
 
-![Screenshot from 2022-03-27 23-34-09](https://user-images.githubusercontent.com/92034288/160408039-26ccf539-e679-4826-9e1f-9ca45c893b0e.png)
+![fig19](https://user-images.githubusercontent.com/92034288/160434141-ef3678a6-7db5-4427-897a-0c6562ac7731.png)
+
 *Figure 19. Snapshot of The Rvmyth Core Successful Run*
 
-![Screenshot from 2022-03-27 23-35-10](https://user-images.githubusercontent.com/92034288/160408128-ced0e468-4eb4-4672-8d31-0bb0e50a378f.png)
+![fig20](https://user-images.githubusercontent.com/92034288/160434169-07f5a618-d5b5-4c8c-860b-c1a2bf48dee4.png)
+
 *Figure 20. Resource Utilization of the Rvmyth Core on SOFA*
 
-![Screenshot from 2022-03-27 23-51-54](https://user-images.githubusercontent.com/92034288/160408560-05f5d421-c34f-449f-8029-4738b95f559f.png)
+![fig21](https://user-images.githubusercontent.com/92034288/160434201-539c306f-ef22-4076-8d3a-aca6395d113d.png)
+
 *Figure 21. Snapshot of the Timing Reports of the Rvmyth Core on SOFA*
 
-![Screenshot from 2022-03-27 23-53-37](https://user-images.githubusercontent.com/92034288/160408834-5a2cb9b3-8ac5-44c7-bc02-f1cf9326f3fe.png)
+![fig22](https://user-images.githubusercontent.com/92034288/160434310-6b007a48-ae0f-4cd5-ae10-4032d5ffafbe.png)
+
 *Figure 22. Snapshot of the Timing Reports of the Rvmyth Core on SOFA*
 
-![Screenshot from 2022-03-27 23-53-55](https://user-images.githubusercontent.com/92034288/160410377-4a733757-9a30-4d49-b0d6-f8b1fe9696f3.png)
+![fig23](https://user-images.githubusercontent.com/92034288/160434379-a23c48f0-5d8a-4e8c-a5d4-64fed4eaff7c.png)
+
 *Figure 23. Snapshot of the Slack Information for Rvmyth Core on SOFA*
 
 
 ![Screenshot from 2022-03-28 00-27-50](https://user-images.githubusercontent.com/92034288/160414659-5f30ed26-1110-4ccd-beca-97f9a3ec01fd.png)
+
 *Figure 24. Vivado Simulation for the Post-synthesis Netlist of Rvmyth Core*
